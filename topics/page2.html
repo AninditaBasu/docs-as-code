@@ -4,3 +4,8 @@ title: page2
 ---
 <h1>Mr. Hyde</h1>
 <p>bad</p>
+
+{% assign UItext = site.data.en[page.UItext] %}
+<p>Insert Liquid text: 
+    {{ UItext.cancel }}
+</p>
