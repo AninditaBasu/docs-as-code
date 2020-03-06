@@ -1,6 +1,14 @@
 {
-  "menu-ok": "OK",
-  "menu.cancel": "Cancel",
-  "file": "File",
-  "save": "Save"
+  "button-ok": "OK",
+  "button-cancel": "Cancel",
+  "button-change": "Switch",
+  "menu-file": "File",
+  "menu-save": "Save",
+  "auth-change": "Change Authentication",
+  "auth-ldap": "Log in with LDAP",
+  "auth-email": "Log in with email and password",
+  "auth-github": "Log in with GitHub",
+  "auth-list": "Paying members",
+  "index-purge": "Failed to purge indexes.",
+  "elastic-sniff": "Enable cluster sniffing"
   }
