@@ -1,12 +1,8 @@
 ---
 layout: default
-title: page1
+title: Starter kits
 ---
-<h1>Dr. Jekyll</h1>
-<p>good</p>
-
-{% assign UItext = site.data.en[page.UItext] %}
-<p>Insert Liquid text: 
-    {{ UItext.ok }}
-</p>
-
+<h1>{{ page.title }}</h1>
+<p>Choose a starter kit from this list, and get your API credentials.</p>
+<p>You can deploy locally or to Clood.</p>
+<p>{{ site.datas.en.ok }}</p>
