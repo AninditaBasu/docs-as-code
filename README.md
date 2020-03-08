@@ -1,4 +1,4 @@
-# docs-as-code
+# Getting started with `Docs as code`
 
 Keep your technical documentation always in sync with UI changes. 
 
@@ -62,12 +62,19 @@ In the new repository you just created, locate the **Settings** button and click
 
 1. Return to the **Code** page on the GitHub web interface, and edit the files so that they contain your own techpubs content:
    1.  Go to the `css` and `js` folders to look at the files there. This template uses the Bootstrap framework, and if you're familiar with the framework, it might be a good idea to retain the files in `css` and `js` till such time as you become more familiar with the files and folders. If you'd like to use any other stylesheets, replace the files with your own.
-   2.  If you added your own files in the `css` or `js` folders, edit the `_layouts` > `default.html` file to add the file references in the `<head>` section. In the `<head>` section, you might also want to edit the metatag entries for social media.
+   2.  If you added your own files in the `css` or `js` folders, edit the `_layouts` > `default.html` file to add those file references in the `<head>` section.
    3. Edit the `_data` > `en.json` file as you deem fit. This file contains the variables that you'll use for your webpages. The entries in this file take the following format: `"variableID": "variable value"`, followed by a comma, except for the last entry, which does not have a comma at the end.
    4. Edit the `topics` > `.html` files as you deem fit. Just use HTML tags like you normally would, but retain the text of lines 1 through 4 as is. Do not touch them 🙂 Feel free to change anything from line 5 onwards. If you edited the `data` > `en.json` file, use those variables in these `.html` files. The format for calling the variables from the `en.json` file is like this: `{{ site.data.<filename>.<varID> }}`. For example, if your data file is called `menu_strings.json` and has an entry like `"hed_aria_label":"Admissions Coordinator"`, the format to use in your `.html` to populate the page with a text like `Admissions Coordinator` is like this: `{{ site.data.menu_strings.hed_aria_label }}`.
    5. In the root folder, edit the `index.html` file, which is used as the landing page of your website, as you deem fit. Again, do not touch lines 1 through 4.
 2.  (Optional) Delete the LICENSE and README.md files. They're nice to have for a GitHub repo but you don't really need them to get your website up and running.
 3.  Go to `https://<yourGithubID>.github.io/<repositoryName>`. You should now see your own content on the website.
+4. Keep playing around with the files:
+   1. Make your documentation social-media-friendly by editing the metadata tags in the `<head>` section of `_layouts` > `default.html`.
+   2. Open a file in the `topics` folder and play with lines 1 to 4 🙂 This part is called `Front Matter` in Jekyll-Liquid parlance. The `topics` > `.html` files in this template have only two entries for front matter:
+      - `_layout`, the value of which in this case is `defaul`t. This tells the build engine to use a file called `defaul`t from the `_layouts` folder to render the page.
+      - `title`, the values of which is the text that is displayed as the title on browser tabs.
+     
+      This front matter is actually a YAML code block and, for your files to render correctly, should always be placed at the very top of the file. You can specify your own variables here, and call the value of those variables on the page later. For example, you can define a variable like this: `hit_list: ['Cruella', 'Villanius', 'Voldemort']` and then pick each item from this list and use it somewhere on the page.
 
 ## Resources
 
