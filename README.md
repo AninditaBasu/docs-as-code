@@ -23,7 +23,7 @@ To use the Jekyll rendering engine, your directory structure should follow a spe
 <hr/>
 
 -  [How to use this repository as a template](#how-to-use-this-repository-as-a-template)
--  [How to customise the files for your technical publication](#how-to-customise-the-files-for-your-technical-publication)
+-  [How to customise the files for your documentation](#how-to-customise-the-files-for-your-documentation)
 -  [Resources](#resources)
 
 <hr/>
@@ -56,15 +56,17 @@ This template contains the barest minimum files that you need for a variables-po
 3.  Click **Create repository from template**. The files and folders from this repository are copied over to a new repository for you.
 In the new repository you just created, locate the **Settings** button and click it. Scroll down to the section called **GitHub pages** and, on the list for **Source**, ensure that **master branch** is selected.
 4.  In the `_config.yml` file, put down your own name and replace the value of `baseurl` with the name of your repository. This name is the same as the one you specified in step 2 earlier.
-5.  Navigate to `https://<yourGithubID_.github.io/<repositoryName>`. What you see on the webpages is pretty much the same as what you saw at `https://aninditabasu.github.io/jekyll-github-starter-pack`. You now have a starting point to work with.
+5.  Navigate to `https://<yourGithubID_.github.io/<repositoryName>`. What you see on the webpages is pretty much the same as what you saw at `https://aninditabasu.github.io/docs-as-code`. You now have a starting point to work with.
 
-## How to customise the files for your technical publication
+## How to customise the files for your documentation
 
-1. Return to the **Code** page on the GitHub web interface, and edit the files so that they contain your own techpubs content:
+1. Return to the **Code** page on the GitHub web interface, and edit the files so that they contain your own documentation:
    1.  Go to the `css` and `js` folders to look at the files there. This template uses the Bootstrap framework, and if you're familiar with the framework, it might be a good idea to retain the files in `css` and `js` till such time as you become more familiar with the files and folders. If you'd like to use any other stylesheets, replace the files with your own.
    2.  If you added your own files in the `css` or `js` folders, edit the `_layouts` > `default.html` file to add those file references in the `<head>` section.
    3. Edit the `_data` > `en.json` file as you deem fit. This file contains the variables that you'll use for your webpages. The entries in this file take the following format: `"variableID": "variable value"`, followed by a comma, except for the last entry, which does not have a comma at the end.
-   4. Edit the `topics` > `.html` files as you deem fit. Just use HTML tags like you normally would, but retain the text of lines 1 through 4 as is. Do not touch them 🙂 Feel free to change anything from line 5 onwards. If you edited the `data` > `en.json` file, use those variables in these `.html` files. The format for calling the variables from the `en.json` file is like this: `{{ site.data.<filename>.<varID> }}`. For example, if your data file is called `menu_strings.json` and has an entry like `"hed_aria_label":"Admissions Coordinator"`, the format to use in your `.html` to populate the page with a text like `Admissions Coordinator` is like this: `{{ site.data.menu_strings.hed_aria_label }}`.
+   4. Edit the `topics` > `.html` files as you deem fit. Just use HTML tags like you normally would, but retain the text of lines 1 through 4 as is. Do not touch them 🙂 Feel free to change anything from line 5 onwards. If you edited the `data` > `en.json` file, use those variables in these `.html` files. 
+   
+      The format for calling the variables from the `en.json` file is like this: `{{ site.data.<filename>.<varID> }}`. For example, if your data file is called `menu_strings.json` and has an entry like `"hed_aria_label":"Admissions Coordinator"`, the format to use in your `.html` to populate the page with a text like `Admissions Coordinator` is like this: `{{ site.data.menu_strings.hed_aria_label }}`.
    5. In the root folder, edit the `index.html` file, which is used as the landing page of your website, as you deem fit. Again, do not touch lines 1 through 4.
 2.  (Optional) Delete the LICENSE and README.md files. They're nice to have for a GitHub repo but you don't really need them to get your website up and running.
 3.  Go to `https://<yourGithubID>.github.io/<repositoryName>`. You should now see your own content on the website.
