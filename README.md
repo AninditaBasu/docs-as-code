@@ -73,10 +73,11 @@ In the new repository you just created, locate the **Settings** button and click
 4. Keep playing around with the files:
    1. Make your documentation social-media-friendly by editing the metadata tags in the `<head>` section of `_layouts` > `default.html`.
    2. Open a file in the `topics` folder and play with lines 1 to 4 🙂 This part is called `Front Matter` in Jekyll-Liquid parlance. The `topics` > `.html` files in this template have only two entries for front matter:
-      - `_layout`, the value of which in this case is `defaul`t. This tells the build engine to use a file called `defaul`t from the `_layouts` folder to render the page.
+      - `_layout`, the value of which in this case is `defaul`t. This tells the build engine to use a file called `default` from the `_layouts` folder to render the page.
       - `title`, the values of which is the text that is displayed as the title on browser tabs.
      
       This front matter is actually a YAML code block and, for your files to render correctly, should always be placed at the very top of the file. You can specify your own variables here, and call the value of those variables on the page later. For example, you can define a variable like this: `hit_list: ['Cruella', 'Villanius', 'Voldemort']` and then pick each item from this list and use it somewhere on the page.
+    3. Try to use your own strings files as the data files in `_data`. Ensure that the string IDs do not contain a period (because Liquid uses the period for referencing). Underscores are fine, though.
 
 ## Resources
 
