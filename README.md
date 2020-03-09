@@ -22,12 +22,17 @@ To use the Jekyll rendering engine, your directory structure should follow a spe
 
 <hr/>
 
+-  [Prerequisites](#prerequisites)
 -  [How to use this repository as a template](#how-to-use-this-repository-as-a-template)
 -  [How to customise the files for your documentation](#how-to-customise-the-files-for-your-documentation)
 -  [Gotchas](#gotchas)
 -  [Resources](#resources)
 
 <hr/>
+
+## Prerequisites
+
+This template is meant for beginners. You need have a basic knowledge of Markdown, HTML, CSS, and JS; bonus if you are familiar with Bootstrap.
 
 ## How to use this repository as a template
 
