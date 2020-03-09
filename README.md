@@ -78,13 +78,13 @@ In the new repository you just created, locate the **Settings** button and click
       - `title`, the values of which is the text that is displayed as the title on browser tabs.
      
       This front matter is actually a YAML code block and, for your files to render correctly, should always be placed at the very top of the file. You can specify your own variables here, and call the value of those variables on the page later. For example, you can define a variable like this: `hit_list: ['Cruella', 'Villanius', 'Voldemort']` and then pick each item from this list and use it somewhere on the page.
-    3. Try to use your own strings files as the data files in `_data`. You can use `.json`, `.csv`, and `.yml` files. 
+    3. Try to use your own strings files as the data files in `_data`. You can use `.json`, `.csv`, `.tsv`, and `.yml` files. 
 
 ## Gotchas
 
 - Ensure that the string IDs in the data files do not contain a period (because Liquid uses the period for referencing). Underscores and hyphens are fine, though.
 - You can have both `.html` and `.md` files as your topics but when referencing the `.md` files anywhere else in the doc set (for example, in the ToC), use the `.html` file extension for the file name (because, during the build, Jekyll would've transformed an _xyz.md_ file to _xyz.html).
-- Sometimes, the strings themselves include code variables and, during code runtime, the value is displayed on the UI. For example, a string like `{{ filename }} moved to archives` is rendered on the UI at runtime as `xyz.doc moved to archives`. I haven't yet found a way to handle such strings through Liquid.
+- Sometimes, the strings themselves include code variables or tokens, the values of which are substituted during runtime. For example, a string like `At {{ timestamp }}, {{ username }} reported an incident at {{ location }}` is rendered on the UI at runtime as `At 12:30 hrs 22-Feb-2066, Skywalker reported an incident at Azbakan`. I haven't yet found a way to handle such strings through Liquid.
 
 ## Resources
 
