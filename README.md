@@ -24,6 +24,7 @@ To use the Jekyll rendering engine, your directory structure should follow a spe
 
 -  [How to use this repository as a template](#how-to-use-this-repository-as-a-template)
 -  [How to customise the files for your documentation](#how-to-customise-the-files-for-your-documentation)
+-  [Gotchas](#gotchas)
 -  [Resources](#resources)
 
 <hr/>
@@ -77,7 +78,13 @@ In the new repository you just created, locate the **Settings** button and click
       - `title`, the values of which is the text that is displayed as the title on browser tabs.
      
       This front matter is actually a YAML code block and, for your files to render correctly, should always be placed at the very top of the file. You can specify your own variables here, and call the value of those variables on the page later. For example, you can define a variable like this: `hit_list: ['Cruella', 'Villanius', 'Voldemort']` and then pick each item from this list and use it somewhere on the page.
-    3. Try to use your own strings files as the data files in `_data`. Ensure that the string IDs do not contain a period (because Liquid uses the period for referencing). Underscores are fine, though.
+    3. Try to use your own strings files as the data files in `_data`. You can use `.json`, `.csv`, and `.yml` files. 
+
+## Gotchas
+
+- Ensure that the string IDs in the data files do not contain a period (because Liquid uses the period for referencing). Underscores and hyphens are fine, though.
+- You can have both `.html` and `.md` files as your topics but when referencing the `.md` files anywhere else in the doc set (for example, in the ToC), use the `.html` file extension for the file name (because, during the build, Jekyll would've transformed an _xyz.md_ file to _xyz.html).
+- Sometimes, the strings themselves include code variables and, during code runtime, the value is displayed on the UI. For example, a string like `{{ filename }} moved to archives` is rendered on the UI at runtime as `xyz.doc moved to archives`. I haven't yet found a way to handle such strings through Liquid.
 
 ## Resources
 
