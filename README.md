@@ -6,6 +6,8 @@ Pull the text of UI labels, hints, error messages, menu options, and so on from 
 
 How?
 
+<img src = "../_layouts/docsAScode.png"/>
+
 If your techdocs are written in Markdown or HTML, you can use the objects, tags, and filters of the Liquid template language in your doc files, and then build your techdocs with Jekyll (which understands Liquid). So, for example, if your techdoc has something like this:
 
 `To access your tokens, go to {{ site.data.uitext.menu-account }} > {{ site.data.uitext.menu-security }} .`
